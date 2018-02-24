@@ -68,7 +68,7 @@ http://127.0.0.1:5001/mine>
 
 3 创建一个交易（使用postman）
 
-![image](https://github.com/kakalote2008/blockchain/img/1.png)
+![image](https://github.com/kakalote2008/blockchain/raw/master/img/1.png)
 
 4 第一个节点再次挖矿
 
@@ -76,12 +76,12 @@ http://127.0.0.1:5000/mine>
 
 5 查看当前区块链,可以看到已经有三个块了
 
-![image](https://github.com/kakalote2008/blockchain/img/2.png)
+![image](https://github.com/kakalote2008/blockchain/raw/master/img/2.png)
 
 6 在两个节点上相互注册对方，使节点可通讯，注意需要对两个节点都执行此操作，此处省略了第二张截图（注意不要加入自身节点，会死循环哦）
 
-![image](https://github.com/kakalote2008/blockchain/img/3.png)
+![image](https://github.com/kakalote2008/blockchain/raw/master/img/3.png)
 
 7 在节点2调用共识算法，解决不同节点的链冲突问题，并对全网内的区块链有效性进行验证。可以看到，由于节点1是更长的链，节点2的区块链会被节点1取代。
 
-![image](https://github.com/kakalote2008/blockchain/img/4.png)
+![image](https://github.com/kakalote2008/blockchain/raw/master/img/4.png)
