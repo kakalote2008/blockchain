@@ -1,9 +1,6 @@
-# 用Python从零开始创建区块链
+# 迷你区块链（比特币）DEMO
 
-本文是博客：[用Python从零开始创建区块链](http://learnblockchain.cn/2017/10/27/build_blockchain_by_python/) 的源码. 
-翻译自[Building a Blockchain](https://medium.com/p/117428612f46)
 
-[博客地址](http://learnblockchain.cn/2017/10/27/build_blockchain_by_python/)| [英文README](https://github.com/xilibi2003/blockchain/blob/master/README-en.md) 
 
 ## 安装
 
@@ -24,7 +21,7 @@ $ pipenv --python=python3.6
 
 ```
 $ pipenv install 
-``` 
+```
 
 5. 运行节点:
     * `$ pipenv run python blockchain.py` 
@@ -56,10 +53,35 @@ $ docker run --rm -p 82:5000 blockchain
 $ docker run --rm -p 83:5000 blockchain
 ```
 
-## 贡献
-[深入浅出区块链](http://learnblockchain.cn/) 想做好的区块链学习博客。
-[博客地址](https://github.com/xilibi2003/learnblockchain) 欢迎大家一起参与贡献，一起推动区块链技术发展。
+## DEMO
+1 启动一个节点
 
+pipenv run python blockchain.py
 
+pipenv run python blockchain.py —port 5001
 
+2 第一次挖矿
 
+<http://127.0.0.1:5000/mine> 
+
+http://127.0.0.1:5001/mine> 
+
+3 创建一个交易（使用postman）
+
+![image](https://github.com/kakalote2008/blockchain/img/1.png)
+
+4 第一个节点再次挖矿
+
+http://127.0.0.1:5000/mine> 
+
+5 查看当前区块链,可以看到已经有三个块了
+
+![image](https://github.com/kakalote2008/blockchain/img/2.png)
+
+6 在两个节点上相互注册对方，使节点可通讯，注意需要对两个节点都执行此操作，此处省略了第二张截图（注意不要加入自身节点，会死循环哦）
+
+![image](https://github.com/kakalote2008/blockchain/img/3.png)
+
+7 在节点2调用共识算法，解决不同节点的链冲突问题，并对全网内的区块链有效性进行验证。可以看到，由于节点1是更长的链，节点2的区块链会被节点1取代。
+
+![image](https://github.com/kakalote2008/blockchain/img/4.png)
